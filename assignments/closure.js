@@ -3,7 +3,17 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-
+function closureExample(){
+  let x = 10;
+  function innerFunction(){
+    x *= 2;
+    console.log(x);
+  }
+  return innerFunction;
+}
+//test
+let closureTest = closureExample();
+closureTest();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
